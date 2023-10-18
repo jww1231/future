@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<Context>
+    <Resource name="jdbc/mariaconn" auth="Container"
+              type="javax.sql.DataSource"
+              factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
+              driverClassName="org.mariadb.jdbc.Driver"
+              url="jdbc:mariadb://127.0.0.1:3306/mirae?autoReconnect=true"
+              username="root"
+              password="2030"
+              maxTotal="100"
+              maxIdle="30"
+              maxWaitMillis="10000"
+              removeAbandonedOnBorrow="true"
+              removeAbandonedTimeout="60">
+    </Resource>
+    <Resource name="jdbc/sungjukconn" auth="Container"
+              type="javax.sql.DataSource"
+              factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
+              driverClassName="org.mariadb.jdbc.Driver"
+              url="jdbc:mariadb://127.0.0.1:3306/sungjuk?autoReconnect=true"
+              username="root"
+              password="2030"
+              maxTotal="100"
+              maxIdle="30"
+              maxWaitMillis="10000"
+              removeAbandonedOnBorrow="true"
+              removeAbandonedTimeout="60">
+    </Resource>
+</Context>
+
