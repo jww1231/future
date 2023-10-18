@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+	let num1 = 10;
+	let num2 = 10.1;
+	
+	let result = 10+20;
+	let result2 = 10+num1;
+	let result3 = num1*num2;
+	let result4 = num1/3;
+	alert(typeof(result4));
+	alert(parseInt('blabla'));
+	// debug를 위해서 출력 : alert, console.log, document.write
+	
+	console.log(parseFloat("1.1")+parseInt("1.1"));
+	console.log((+"1.1")+(+"1.1"));
+	console.log(("1.1")+("1.1"));
+	let x = 0.2 + 0.1; // 부동소수점인 경우에는 오차가 있음 0 == 0.0000000000000001234
+	console.log(x);
+	let width = "200px";
+	width = parseInt(width)*2+"px";
+	console.log("숫자로 변환한 다음 문자열 연산으로 출력한 내용 "+ width);
+	</script>
+	
+
+</body>
+</html>

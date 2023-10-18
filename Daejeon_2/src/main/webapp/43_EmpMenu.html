@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery UI Accordion - Default functionality</title>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="/resources/demos/style.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+	<script>
+		$(function () {
+			$("#accordion").accordion();
+		});
+	</script>
+	<script>
+		function validataForm( ){// dom(document), bom(window)
+			let name = document.forms["myForm"]["name"].value; // 이름
+			let id = document.forms["myForm"]["id"].value; // 아이디
+			let salary = document.forms["myForm"]["salary"].value; // 급여
+				if(name == "" || id == "" || salary==""){
+					alert("데이터를 모두 채우시오");
+					return false;
+				}
+		}
+		// 과제 : sungjuk에 있는 student 테이블에 대하여
+		// CRUD를 할 수 있도록 servlet을 이용해서 구현하시오
+		
+		
+	</script>
+</head>
+
+<body>
+
+	<div id="accordion">
+		<h3>입력</h3>
+		<div>
+			<p>
+			<form name = "myForm" action="EmpProcess" onsubmit="return validataForm()">
+				<table width="40%" border="1">
+					<caption>
+						<h3>회원가입!</h3>
+					</caption>
+					<tr>
+						<th width="30%"> 번호</th>
+						<td width="70%" align="center">
+							<input type="text" name="id" size="27%" />
+						</td>
+					</tr>
+					<tr>
+						<th width="30%">이름</th>
+						<td width="70%" align="center">
+							<input type="text" name="name" size="27%" />
+						</td>
+					</tr>
+					<tr>
+						<th width="30%">급여</th>
+						<td width="70%" align="center">
+							<input type="text" name="salary" size="27%" />
+						</td>
+					</tr>
+				</table>
+				<br />
+				<table width="40%">
+					<tr>
+						<td align="right">
+							<input type="hidden" id="action" name="action" value="insert">
+							<input type="submit" value="회원가입" />
+						</td>
+					</tr>
+				</table>
+			</form>
+			</p>
+		</div>
+		<h3>출력</h3>
+		<div>
+			<p>
+			<form method="get" action="EmpProcess">
+				<input type="submit" value="회원보기" />
+				<input type="hidden" name="action" value="select">
+
+
+
+			</form>
+			</p>
+		</div>
+		<h3>수정</h3>
+		<div>
+			<p>
+			<form action="EmpProcess">
+				<table width="40%" border="1">
+					<caption>
+						<h3>수정진행</h3>
+					</caption>
+					<tr>
+						<th width="30%">번호 선택</th>
+						<td width="70%" align="center">
+							<input type="text" name="id" size="27%" />
+						</td>
+					</tr>
+					<tr>
+						<th width="30%">수정할 이름</th>
+						<td width="70%" align="center">
+							<input type="text" name="name" size="27%" />
+						</td>
+					</tr>
+					<tr>
+						<th width="30%">수정할 급여</th>
+						<td width="70%" align="center">
+							<input type="text" name="salary" size="27%" />
+						</td>
+					</tr>
+				</table>
+				<br />
+				<table width="40%">
+					<tr>
+						<td align="right">
+							<input type="hidden" id="action" name="action" value="update">
+							<input type="submit" value="회원수정" />
+						</td>
+					</tr>
+				</table>
+			</form>
+			</p>
+			<ul>
+
+			</ul>
+		</div>
+		<h3>삭제</h3>
+		<div>
+			<p>
+			<form action="EmpProcess.jsp">
+				<table width="40%" border="1">
+					<caption>
+						<h3>회 원 삭 제!</h3>
+					</caption>
+					<tr>
+						<th width="30%">이름</th>
+						<td width="70%" align="center">
+							<input type="text" name="name" size="27%" />
+						</td>
+					</tr>
+
+				</table>
+				<br />
+				<table width="40%">
+					<tr>
+						<td align="right">
+							<input type="hidden" id="action" name="action" value="insert">
+							<input type="submit" value="회원삭제" />
+						</td>
+					</tr>
+				</table>
+			</form>
+			</p>
+
+		</div>
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var person = { // object 
+		name : '대전', // 키이 : 데이터 
+		phone : '010-1111-2222',
+		gender : 'man',
+		addr : 'seoul'
+		// 자바에서는 정의도니 멤버변수만 사용해야함 (기본적으로 참조변수)
+	};
+	alert(person.name);
+	var mem2 = {}; // 객체 초기화
+	mem2.name = '선문'; // 인스턴스한 다음에 추가가 가능
+	mem2.phone = '010-1111-2222';
+	mem2.gender = 'man';
+	mem2.addr = 'seoul';
+	alert(mem2.name);
+	console.log(mem2['name']);
+	delete mem2 ['addr'];// 추가가 가능하니까 삭제도 됨
+	// 1급 객체
+	function Vehicle(name, maker){
+		this.name = name;
+		this.maker = maker;
+		
+	}
+	let car1 = new Vehicle('소나타','현대'); //1급객체로써 함수인데 클래스다
+	let car2 = new Vehicle('산타페','기아');
+	
+	console.log(car1.name);
+	console.log(car2.name);
+	
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

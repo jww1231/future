@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<p id="demo1"></p> </br>
+	<p id="demo2"></p></br>
+	<p id="demo3"></p></br>
+	<p id="demo4"></p></br>
+	<p id="demo5"></p></br>
+	<script>
+		const d = new Date(2018, 11, 24, 10, 33, 30);
+		console.log(d);
+		document.getElementById("demo1").innerHTML = d;
+		document.getElementById("demo2").innerHTML = new Date("2015-03-25T12:00:00-06:00");
+		const msec = Date.parse("March 21, 2012"); // 날짜데이터는 문자열로 입출력
+		//메모리에서는 특수한 형태의 숫자로 계산
+		document.getElementById("demo3").innerHTML = msec;
+		
+		const e = new Date();
+		//월을 문자열로 변경할때
+		const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+		document.getElementById("demo4").innerHTML = months[e.getMonth()];
+		
+		const t = new Date();
+		t.setDate(15);
+		document.getElementById("demo5").innerHTML = t;
+	</script>
+
+</body>
+</html>

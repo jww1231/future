@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style>
+		#two,#three{
+			display: none;
+		}
+		
+	</style>
+</head>
+<body>
+	<ul class="nav">
+		<li><a href = "#one">one</a></li>
+		<li><a href = "#two">two</a></li>
+		<li><a href = "#three">three</a></li>
+	</ul>
+	<p class="nav-content" id = "one">1. 선택적으로 보기</p>
+	<p class="nav-content" id = "two">2. HTML, CSS3, Javacript의 연합 작업</p>
+	<p class="nav-content" id = "three">3. 자바스크립트 반복문도 자바와 동일하네</p>
+	
+	<script>
+		//배열과 반복문
+		var links=document.querySelectorAll(".nav a"); // 배열이 리턴
+		for(var i=0; i<links.length; i++){
+			links[i].addEventListener("click",function(){
+				var navContents=document.querySelectorAll(".nav-content");
+				navContents.forEach(function(item){ // 함수형 프로그래밍
+					item.style.display="none";
+				});
+				var sel =this.getAttribute("href");
+				console.log("sel:"+sel);
+				document.querySelector(sel).style.display="block";
+			});
+		}
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html> <!-- 웹주석 : html5-->
+<html>
+
+<head>
+	<meta charset="UTF-8"> <!-- 문자 set은 utf-8로 통일 -->
+	<title>div & css</title> <!-- 웹브라우저의 창에 출력 -->
+
+	<style>
+		.red-bold {
+			color: red;
+			font-weight: bold;
+		}
+
+		.box { 
+			width: 100px;/* 박스를 표현*/ 
+			height: 100px;
+			padding: 10px; /*테두리를 중심하고 안여백*/
+			margin: 10px;  /*테두리를 중심하고 바깥여백*/
+			border-width: 10px;
+			border-style: solid;
+			border-color: red;
+		}
+
+		#myFriends {/* .은 클래스 #은 아이디와 연결된다 */
+			list-style-type: none;
+			padding: 10px;
+			margin:  10px;
+
+		}
+	</style>
+
+</head>
+
+<body> <!-- DOM (Document object model -->
+	<!-- 문단을 만드는 이유 : 동일한 효과 -->
+	<!-- style : css를 주는 방법 -->
+
+	<p style="font-size:50px">I am big </p>
+	<div class="box">div 요소는 문단을 나타낼때 사용합니다. </div>
+	<div class="box">div는 Block 요소 입니다. </div>
+	<div class="box">세번째 문단 </div>
+	<div class="box">네번째 문단 <span>단락 </span> </div>
+	<div class="box" id="myFriends"> span 요소는 인라인
+		<span class="red-bold">요소</span> 입니다.
+		하나 두울 세엣
+	</div>
+
+</body>
+
+</html>

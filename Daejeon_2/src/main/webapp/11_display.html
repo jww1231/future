@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		#one {
+			display: none;
+			/*보이지 않게*/
+		}
+	</style>
+
+</head>
+
+<body>
+	<h1>display 속성 테스트</h1>
+	<button id="showBtn">눌러보셈</button>
+	<button id="hideBtn">숨기기</button>
+	<button id="toggleBtn">토글</button>
+	<p id="one"> Here are the different input types you can use in
+	</p>
+	<script>
+		document.querySelector("#hideBtn").addEventListener(// 클릭이 벌어지기를 기다린다 callback 함수 자바에서는 리스너
+			"click", function () {
+
+				document.querySelector("#one")
+					.style.display = "block";
+			});
+
+		// getSelectById() 아이디, getSelectClassName() 이름
+		document.querySelector("#showBtn").addEventListener(// 클릭이 벌어지기를 기다린다 callback 함수 자바에서는 리스너
+			"click", function () {
+
+				document.querySelector("#one")
+					.style.display = "block";
+			});
+
+		document.querySelector("#toggleBtn").addEventListener(// 클릭이 벌어지기를 기다린다 callback 함수 자바에서는 리스너
+			"click", function () {
+				
+				var current = document.querySelector("#one").style.display;
+				if(current == "none"){
+					document.querySelector("#one").style.display="inline";
+				}else{
+					document.querySelector("#one").style.display="none";
+				}
+				});
+
+	</script>
+</body>
+
+</html>

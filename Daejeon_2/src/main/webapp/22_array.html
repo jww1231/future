@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	//리스트로 작성된 배열, 이질적인 데이터도 가능 : python 
+	// 
+	var nums = [10,20,30,40,50];
+	
+	var names= ["고구려","희망이","성취해","원하는대로"];
+	
+	var a=nums[0];
+	console.log(nums[0]);//read
+	names[0]="대한민국"; // 수정
+	names.splice(2,1);
+	names.push("미국"); // 추가
+	// name.pop(); // 삭제
+	
+	var size = nums.length;
+	document.write(size);
+	console.log(typeof names);
+	document.write(names);
+	document.write(" 배열에 대하여 : 리스트로 구성, 추가(push) 삭제(pop) 가능");
+	
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

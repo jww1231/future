@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>SPA(single page application )</title>
+	<!-- href(hyper reference)-->
+	<!-- react (class based) 나 vue: front-end -->
+	<style>
+		.divdistance {
+			height: 1000px;
+		}
+	</style>
+</head>
+
+<body>
+	<p id="start"> 메뉴 </p>
+	<a href="#one">첫페이지</a>
+	<a href="#two">둘째페이지</a><!-- 1920 * 1070 pixel 사각형 -->
+	<a href="#three">셋째페이지</a>
+
+	<div class="divdistance" background-color=yellow></div>
+	<p id="one"> 첫페이지 : SPA(Single application)로 프로그래 할때 좋음
+	</p>
+	<a href="#start">메뉴로</a>
+
+	<div class="divdistance"></div>
+	<p id="three">셋째 페이지 : 다양한 형태로 변화가능</p>
+	<a href="#start">메뉴로</a>
+
+	<script>
+		//자바스크립트 언어 : 변수, 연산자, 제어문, 함수, 클래스 객체가 있음
+		//함수도 1급 객체다(변수에 대입가능, 매개변수로 전달, 리턴값으로 전달)
+		var test = function () {// 참조형 언어가 구현되어있다.
+			console.log("test 함수 호출됨!");
+		}
+	</script>
+	<div class="divdistance" background-color=red></div>
+	<a href="javascript: ">빈코드</a>
+	<a href="javascript:alert('hello');">인라인코딩(내장함수)</a> 
+	<a href="javascript:test();">함수호출</a>
+	<a href="01_first.html" target="_blank">첫html로 이동</a>
+</body>
+
+</html>
